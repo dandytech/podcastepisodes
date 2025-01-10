@@ -6,10 +6,10 @@ import good from "@/public/good.png";
 
 import Image from "next/image";
 
-import Button from "@/components/Button";
 import image from "@/public/productimg.png";
 import imageicon from "@/public/imageicon.png";
 import { FaEllipsisH } from "react-icons/fa";
+import MyButton from "@/components/MyButton";
 
 const productimage = [
   {
@@ -372,9 +372,9 @@ export default function productDetails() {
           <Link href="/productDetails">Cancel</Link>
         </button>
         <span className="w-[45%]">
-          <Button onClick={() => {}}>
+          <MyButton onClick={() => {}}>
             <Link href="/productDetails3">Save</Link>
-          </Button>
+          </MyButton>
         </span>
       </div>
     </div>

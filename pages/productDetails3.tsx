@@ -15,7 +15,8 @@ import eclipse from "@/public/eclipse.png";
 
 import ReadMore from "@/components/ReadMore";
 import TruncatedText from "@/components/TruncatedText";
-import Button from "@/components/Button";
+
+import MyButton from "@/components/MyButton";
 export default function productDetails3() {
   const text =
     "For wholesale,we will offer discount or free express shipping which only takes 3-7 days to arrive Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras vehicula, quam eu fringilla consectetur, justo elit suscipit metus, eu consequat eros dolor at ligula.";
@@ -268,7 +269,7 @@ export default function productDetails3() {
         </div>
 
         <div className="pt-5 border-t mt-7">
-          <Button onClick={() => {}}>Publish</Button>
+          <MyButton onClick={() => {}}>Publish</MyButton>
         </div>
       </div>
     </div>

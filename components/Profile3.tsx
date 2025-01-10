@@ -2,8 +2,9 @@ import Image from "next/image";
 import React from "react";
 import pic from "../public/pic.png";
 import InputBox from "./InputBox";
-import Button from "./Button";
+
 import Link from "next/link";
+import MyButton from "./MyButton";
 // Define the props type for the component
 interface Details3Props {
   handleTabClick: (tab: number) => void; // handleTabClick expects a function that takes a number and returns void
@@ -43,9 +44,9 @@ const Details3: React.FC<Details3Props> = ({ handleTabClick }) => {
         <InputBox placeholder="Category" type="text" />
       </div>
       <div className="mt-10">
-        <Button>
+        <MyButton>
           <Link href="/productDetails">Continue</Link>
-        </Button>
+        </MyButton>
       </div>
     </div>
   );

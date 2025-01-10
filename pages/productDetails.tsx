@@ -6,7 +6,8 @@ import good from "@/public/good.png";
 import imageicon from "@/public/imageicon.png";
 import Image from "next/image";
 import InputBox from "@/components/InputBox";
-import Button from "@/components/Button";
+
+import MyButton from "@/components/MyButton";
 export default function productDetails() {
   return (
     <div>
@@ -159,9 +160,9 @@ export default function productDetails() {
           <Link href="/profile">Cancel</Link>
         </button>
         <span className="w-[45%]">
-          <Button onClick={() => {}}>
+          <MyButton onClick={() => {}}>
             <Link href="/productDetails2">Save</Link>
-          </Button>
+          </MyButton>
         </span>
       </div>
     </div>

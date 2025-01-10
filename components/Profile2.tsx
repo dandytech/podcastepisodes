@@ -1,11 +1,12 @@
 import React from "react";
 import InputBox from "./InputBox";
-import Button from "./Button";
+
 import instagram from "../public/instagram.png";
 import tiktok from "../public/tiktok.png";
 import google from "../public/google-1.png";
 
 import Image from "next/image";
+import MyButton from "./MyButton";
 
 // Define the props type for the component
 interface Details2Props {
@@ -66,7 +67,7 @@ const Details2: React.FC<Details2Props> = ({ handleTabClick }) => {
       <div className="mt-20">
         <hr className="h-2" />
         <div className="mt-3">
-          <Button onClick={() => handleTabClick(3)}>Continue</Button>
+          <MyButton onClick={() => handleTabClick(3)}>Continue</MyButton>
         </div>
       </div>
     </div>

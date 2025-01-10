@@ -3,8 +3,9 @@ import React from "react";
 import shopimg from "@/public/shopimg.png";
 
 import check_circle from "@/public/check_circle.png";
-import Button from "../components/Button";
+
 import Link from "next/link";
+import MyButton from "@/components/MyButton";
 const homedata = [
   {
     icon: check_circle,
@@ -34,8 +35,6 @@ function index() {
         {" "}
         <Image
           src={shopimg}
-          //fill
-          // placeholder="blur"
           quality={70}
           className="object-cover object-top"
           alt="Mountains and forests with two cabins"
@@ -70,7 +69,7 @@ function index() {
 
       <div className="w-full px-5 mt-10">
         <Link href="/profile">
-          <Button onClick={() => {}}>Get started</Button>
+          <MyButton onClick={() => {}}>Get started</MyButton>
         </Link>
       </div>
     </div>

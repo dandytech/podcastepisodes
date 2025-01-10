@@ -1,6 +1,7 @@
 import React from "react";
 import InputBox from "./InputBox";
-import Button from "./Button";
+
+import MyButton from "./MyButton";
 
 // Define the props type for the component
 interface Details1Props {
@@ -28,7 +29,7 @@ const Details1: React.FC<Details1Props> = ({ handleTabClick }) => {
       <div className="mt-10">
         <hr className="h-2" />
         <div className="mt-3">
-          <Button onClick={() => handleTabClick(2)}>Continue</Button>
+          <MyButton onClick={() => handleTabClick(2)}>Continue</MyButton>
         </div>
       </div>
     </div>

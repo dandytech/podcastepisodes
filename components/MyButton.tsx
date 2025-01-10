@@ -1,6 +1,11 @@
 import React from "react";
 
-export default function Button({ children, onClick }) {
+interface ButtonProps {
+  children: React.ReactNode;
+  onClick?: () => void; // Make onClick optional
+}
+
+const MyButton: React.FC<ButtonProps> = ({ children, onClick }) => {
   return (
     <button
       onClick={onClick}
@@ -11,4 +16,6 @@ export default function Button({ children, onClick }) {
       <span className="absolute inset-x-0 -bottom-3 h-3 bg-gradient-to-b from-[#FE2C55]/80 bg-red-300 to-transparent blur-lg"></span>
     </button>
   );
-}
+};
+
+export default MyButton;
