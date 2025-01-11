@@ -48,7 +48,11 @@ const SSRProduct: React.FC<SSRProductProps> = ({ products }) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    const res = await fetch("https://fakestoreapi.com/products"); // Fetch from dummy API
+    // Get the API URL from environment variables
+    const apiUrl =
+      process.env.NEXT_PUBLIC_API_URL || "https://fakestoreapi.com"; // Use fallback URL if not defined
+
+    const res = await fetch(`${apiUrl}/products`);
     const products: Product[] = await res.json();
 
     return {

@@ -58,7 +58,11 @@ const SSGProduct: React.FC<SSGProductProps> = ({ products }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const res = await fetch("https://fakestoreapi.com/products"); // Fetch from dummy API
+    // Get the API URL from environment variables
+    const apiUrl =
+      process.env.NEXT_PUBLIC_API_URL || "https://fakestoreapi.com"; // Use fallback URL if not defined
+
+    const res = await fetch(`${apiUrl}/products`);
     const products: Product[] = await res.json();
 
     console.log(products);
