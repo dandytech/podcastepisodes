@@ -220,7 +220,6 @@ export default function productDetails3() {
 
                 <div className="flex gap-1 items-center">
                   <span>
-                    {" "}
                     <Image
                       src={group}
                       quality={100}
@@ -269,7 +268,9 @@ export default function productDetails3() {
         </div>
 
         <div className="pt-5 border-t mt-7">
-          <MyButton onClick={() => {}}>Publish</MyButton>
+          <MyButton onClick={() => {}}>
+            <Link href="/ssgproduct">Publish</Link>
+          </MyButton>
         </div>
       </div>
     </div>

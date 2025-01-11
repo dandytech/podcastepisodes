@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { ContextProvider } from "./contexts/ContextProvider";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -17,7 +18,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
         <div className="flex-1 px-8 py-12 grid">
           <main className="max-w-7xl mx-auto w-full">
-            <Component {...pageProps} />
+            <ContextProvider>
+              <Component {...pageProps} />
+            </ContextProvider>
           </main>
         </div>
       </div>
