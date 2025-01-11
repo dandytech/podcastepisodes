@@ -6,8 +6,8 @@ export function middleware(req: NextRequest) {
   const token = req.cookies.get("auth-token")?.value;
 
   if (!token) {
-    // Redirect to the Home page if no token is found
-    return NextResponse.redirect(new URL("/", req.url));
+    // Redirect to the Login page if no token is found
+    return NextResponse.redirect(new URL("/login", req.url));
   }
 
   // Proceed with the request if authenticated
