@@ -4,7 +4,7 @@ import { IoArrowBack } from "react-icons/io5";
 import Profile1 from "../components/Profile1.tsx";
 import Profile2 from "../components/Profile2.tsx";
 import Profile3 from "../components/Profile3.tsx";
-import { useStateContext } from "../pages/contexts/ContextProvider.tsx";
+import { useStateContext } from "../contexts/ContextProvider.tsx";
 export default function details() {
   //const [activeTab, setActiveTab] = useState(1);
   const { activeTab, setActiveTab } = useStateContext();
