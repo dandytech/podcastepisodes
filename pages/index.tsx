@@ -342,15 +342,22 @@ const partners = [
 ];
 
 function index() {
-  const getCustomChunks = (items) => {
-    let result = [];
-    let rowLength = 4; // start with 3 in first row
+  interface Item {
+    // Define the structure of your items here
+    // For example:
+    // id: number;
+    // name: string;
+  }
+
+  const getCustomChunks = (items: Item[]): Item[][] => {
+    const result: Item[][] = [];
+    let rowLength = 4;
     let index = 0;
 
     while (index < items.length) {
       result.push(items.slice(index, index + rowLength));
       index += rowLength;
-      rowLength++; // increase row length for next line
+      rowLength++;
     }
 
     return result;
