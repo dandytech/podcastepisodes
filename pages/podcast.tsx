@@ -78,21 +78,6 @@ import { formatDate } from "@/util/dateFormater";
 //   },
 // ];
 export default function podcast() {
-  // const itemsPerPage = 3; // Change to desired number
-  // const [currentPage, setCurrentPage] = useState(1);
-
-  // const totalPages = Math.ceil(podcasts.length / itemsPerPage);
-  // const startIndex = (currentPage - 1) * itemsPerPage;
-  // const currentItems = podcasts.slice(startIndex, startIndex + itemsPerPage);
-
-  // const handlePrev = () => {
-  //   if (currentPage > 1) setCurrentPage((prev) => prev - 1);
-  // };
-
-  // const handleNext = () => {
-  //   if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
-  // };
-
   const itemsPerPage = 3; // Change to desired number
   const [currentPage, setCurrentPage] = useState(1);
   const { data, isLoading } = useGetPodcasts(currentPage, itemsPerPage);
