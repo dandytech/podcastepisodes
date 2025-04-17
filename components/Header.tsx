@@ -215,7 +215,7 @@ const Header: React.FC = () => {
           <div>
             <ul className="flex flex-col gap-10 text-[#282828]  items-center relative font-[700]text-[15px]">
               <li>
-                <Link href={homeLink}>Home</Link>
+                <Link href="/">Home</Link>
               </li>
 
               <li className="flex items-center justify-center">
