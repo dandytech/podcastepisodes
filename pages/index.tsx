@@ -346,7 +346,7 @@ function index() {
     // Define the structure of your items here
     // For example:
     // id: number;
-    // name: string;
+    logo: string;
   }
 
   const getCustomChunks = (items: Item[]): Item[][] => {
