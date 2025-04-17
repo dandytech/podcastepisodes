@@ -986,9 +986,9 @@ function index() {
               key={rowIndex}
               className="flex justify-center items-center gap-5 flex-wrap"
             >
-              {row.map((partner) => (
+              {row.map((partner, index) => (
                 <div
-                  key={partner.id}
+                  key={index}
                   className="w-[100px] md:w-[120px] lg:w-[150px]"
                 >
                   <Image
