@@ -550,7 +550,7 @@ function index() {
                 >
                   {data?.data?.map((slide) => (
                     <SwiperSlide key={slide.id}>
-                      <Link href="/">
+                      <Link href="/podcast">
                         <div
                           className="lg:pb-20 bg-cover bg-center bg-no-repeat w-full h-[424px] relative"
                           style={{
@@ -629,16 +629,20 @@ function index() {
                 >
                   {latestData?.data?.map((slide) => (
                     <SwiperSlide key={slide.id}>
-                      <div
-                        className="pb-20 bg-cover bg-center bg-no-repeat w-full h-[223px]"
-                        style={{ backgroundImage: `url(${slide.picture_url})` }}
-                      ></div>
-
+                      <Link href="/episode">
+                        <div
+                          className="pb-20 bg-cover bg-center bg-no-repeat w-full h-[223px]"
+                          style={{
+                            backgroundImage: `url(${slide.picture_url})`,
+                          }}
+                        ></div>
+                      </Link>
                       <div className="py-3 text-white text-left px-3 flex flex-col gap-5">
                         <div className="text-[13px] justify-between flex gap-3 items-center px-3 font-[700] pt-3">
                           <span className="text-[#828282] font-[700] text-[13px]">
                             {formatDate(slide.created_at)}
                           </span>
+
                           <span>
                             <Image
                               src={elipsis}
@@ -647,6 +651,7 @@ function index() {
                               alt="logo"
                             />
                           </span>
+
                           <span className="text-[#828282] font-[700] text-[13px]">
                             {/* {slide.duration} */}
                             {slide.id} MINS
