@@ -215,7 +215,9 @@ const Header: React.FC = () => {
           <div>
             <ul className="flex flex-col gap-10 text-[#282828]  items-center relative font-[700]text-[15px]">
               <li>
-                <Link href="/">Home</Link>
+                <Link href="/" onClick={handleMenu}>
+                  Home
+                </Link>
               </li>
 
               <li className="flex items-center justify-center">
@@ -226,13 +228,21 @@ const Header: React.FC = () => {
               </li>
 
               <li>
-                <Link href={homeLink}>Resources</Link>
+                <Link href="/" onClick={handleMenu}>
+                  Resources
+                </Link>
               </li>
               <li>
-                <Link href={homeLink}> Contact us</Link>
+                <Link href="/" onClick={handleMenu}>
+                  {" "}
+                  Contact us
+                </Link>
               </li>
               <li>
-                <Link href={homeLink}> Advertise</Link>
+                <Link href="/" onClick={handleMenu}>
+                  {" "}
+                  Advertise
+                </Link>
               </li>
 
               {/* Search */}
